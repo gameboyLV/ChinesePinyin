@@ -7,6 +7,9 @@ AS
 BEGIN
 	i:=1;
 	rtnstr:='';
+  IF NVL(null,'')='' THEN 
+    RETURN nm;
+  END IF;
 	LOOP
 		str:=SUBSTR(nm,i,1);
 		rtnstr:=CONCAT(rtnstr,
@@ -436,6 +439,9 @@ AS
 BEGIN
 	i:=1;
 	rtnstr:='';
+  IF NVL(null,'')='' THEN 
+    RETURN nm;
+  END IF;
 	LOOP
 		str:=SUBSTR(nm,i,1);
 		rtnstr:=CONCAT(rtnstr,

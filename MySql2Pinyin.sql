@@ -8,6 +8,9 @@ DECLARE rtnstr varchar(5000);
 
 SET i=1;
 SET rtnstr='';
+IF length(IFNULL(nm,''))=0 THEN 
+  RETURN nm;
+END IF;
 REPEAT
   SET str=SUBSTRING(nm,i,1);
   SET rtnstr=CONCAT(rtnstr,CASE
@@ -437,6 +440,9 @@ DECLARE rtnstr varchar(5000);
 
 SET i=1;
 SET rtnstr='';
+IF length(IFNULL(nm,''))=0 THEN 
+  RETURN nm;
+END IF;
 REPEAT
   SET str=SUBSTRING(nm,i,1);
   SET rtnstr=CONCAT(rtnstr,
